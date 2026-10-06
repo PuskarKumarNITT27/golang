@@ -1,0 +1,18 @@
+use : 
+sudo apt install golang-go
+
+
+1. use `go mod init example.com/go-basics` to initialize go project
+
+
+go run 04_var_vs_short_declaration/main.go 
+London puskar 10100
+10000 20
+
+
+==== or ==== 
+
+
+go run ./04_var_vs_short_declaration/
+London puskar 10100
+10000 20
