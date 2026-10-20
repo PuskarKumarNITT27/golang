@@ -1,0 +1,46 @@
+go get github.com/gin-gonic/gin@latest
+go get github.com/joho/godotenv
+go get go.mongodb.org/mongo-driver/v2/mongo
+go get go.mongodb.org/mongo-driver/v2/mongo/options 
+
+
+MONGO_URI=
+MONGO_DB_NAME=
+PORT= 
+
+go install github.com/air-verse/air@latest 
+
+root = "."
+tmp_dir = "tmp"
+
+[build]
+cmd = "go build -o ./tmp/api ./cmd/api"
+entrypoint = "./tmp/api"
+delay = 300
+exclude_dir = ["tmp", "vendor"]
+exclude_regex = ["_test.go"]
+
+[log]
+time = true
+
+================================================
+NOTES: 
+1. go.mongodb.org/mongo-driver/v2/mongo
+
+    Purpose: Interact with MongoDB databases and collections.
+    
+    It provides functionality to:
+    - Connect to a MongoDB server.
+    - Select a database and collection.
+    - Insert, find, update, and delete documents.
+    - Execute database queries.
+
+2. go.mongodb.org/mongo-driver/v2/mongo/options
+
+    Purpose: Configure how the MongoDB driver connects and operates.
+
+    For example, it allows you to configure:
+    - MongoDB connection URI.
+    - Connection pool settings.
+    - Timeouts and other client settings.
+    - Options for certain database operations
